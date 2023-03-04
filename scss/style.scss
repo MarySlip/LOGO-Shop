@@ -1,0 +1,268 @@
+// Фаил Обнуляющих Стилей
+@import "_nullstyle";
+
+
+//FONTS________________________________________________________________________________
+
+
+//Шрифт по умолчанию
+$fontfamily: "PT Sans";
+
+//Переменные
+$minwidth: 320px;
+$mw: 970;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+
+//Миксины
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;
+}
+
+@mixin tr($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+	-webkit-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+}
+
+@mixin anim($time, $deley) {
+	transition: all $time ease $deley;
+	-webkit-transition: all $time ease $deley;
+	-ms-transition: all $time ease $deley;
+	-moz-transition: all $time ease $deley;
+	-o-transition: all $time ease $deley;
+}
+
+@mixin scale($num) {
+	transform: scale($num);
+	-webkit-transform: scale($num);
+	-ms-transform: scale($num);
+	-moz-transform: scale($num);
+	-o-transform: scale($num);
+}
+
+@mixin rotate($deg) {
+	transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+}
+
+@mixin flexorder($val) {
+	-moz-box-ordinal-group: $val;
+	-webkit-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
+
+
+
+
+//Функции------------------------------------------------------------------------------
+//TO %
+@function prc($pxOne, $pxTwo) {
+	$result: math.div($pxOne, $pxTwo) * 100;
+	@return $result;
+}
+
+//REM
+@function rem($px) {
+	$result: math.div($px, 16)+rem;
+	@return $result;
+}
+
+//EM
+@function em($px) {
+	$result: math.div($px, 16)+em;
+	@return $result;
+}
+
+//---------------------------------------------------------------------------------------
+
+
+
+
+
+
+//Основная сетка
+/*.container{max-width: $mw+px;margin: 0 auto;width: 100%;
+@media (max-width:$md1+px){max-width: 750px;}
+@media (max-width:$md2+px){max-width: none;padding: 0 10px;}
+}*/
+
+//BURGER____________________________________________________________________________
+/*.icon-menu{
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	z-index: 5;
+	span{
+		@include anim(0.3s, 0s);
+		top: calc(50% - 1px);
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+		&:first-child{
+			top: 0;
+		}
+		&:last-child{
+			top: auto;
+			bottom: 0;
+		}
+		&._active{
+			span{
+				@include scale(0);
+				&:first-child{
+					@include rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					@include rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+*/
+
+//IBG-IMAGE v BACKGROUND
+.-ibg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	img {
+		display: none;
+	}
+}
+
+//--------------------------------------------------------------------------
+
+
+
+//SLIDER--------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+html,
+body {
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 25px;
+}
+
+
+
+
+
+.wrapper {
+	height: 100%;
+	padding: 50px;
+}
+
+
+.-container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	/*
+	@media (max-width: $md1) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+	*/
+}
+
+
+
+//HEADER__________________________________________________________________
+
+//BURGER---------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------
+
+
+
+
+//----------------------------------------------------------------------------------------
+
+
+
+
+
+//Основной контент--------------------------------------------------------------------------
+.yellov {
+	color: yellow;
+}
+
+//MAIN----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------
+
+//SLIDER----------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------------
+
+//MAIN LOTS-----------------------------------------------------------------
+
+
+
+
+
+
+//MAIN lots SLIDE--------------------------------------------------------------------
+
+
+
+//--------------------------------------------------------------------------------
+
+
+//LOT------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------

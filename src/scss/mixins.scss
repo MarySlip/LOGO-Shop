@@ -1,0 +1,54 @@
+//Миксины
+
+//
+
+
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;
+}
+
+@mixin tr($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+	-webkit-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+}
+
+@mixin anim($time, $deley) {
+	transition: all $time ease $deley;
+	-webkit-transition: all $time ease $deley;
+	-ms-transition: all $time ease $deley;
+	-moz-transition: all $time ease $deley;
+	-o-transition: all $time ease $deley;
+}
+
+@mixin scale($num) {
+	transform: scale($num);
+	-webkit-transform: scale($num);
+	-ms-transform: scale($num);
+	-moz-transform: scale($num);
+	-o-transform: scale($num);
+}
+
+@mixin rotate($deg) {
+	transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+}
+
+@mixin flexorder($val) {
+	-moz-box-ordinal-group: $val;
+	-webkit-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}

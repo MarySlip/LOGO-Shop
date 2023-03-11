@@ -1,7 +1,7 @@
-import * as flsFunctions from "./modules/functions.js";
-
-flsFunctions.isWebp();
-
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-const swiper = new Swiper();
+$(document).ready(function(){
+$('.icon-menu').click(function (event) {
+	$(this).toggleClass('_active');
+	$('.menu__body').toggleClass('-active');
+	$('body').toggleClass('lock');
+});
+});

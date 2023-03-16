@@ -14,6 +14,76 @@
   font-weight: 400;
   font-style: normal;
 }
+.btn {
+  display: inline-flex;
+  padding: 0 25px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  height: 39px;
+  background-color: #f68038;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .btn:hover {
+    background-color: #943f0a;
+  }
+}
+.btn.-fw {
+  width: 100%;
+}
+
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0 20px;
+}
+textarea.input {
+  resize: none;
+  padding: 0;
+}
+
+.checkbox {
+  position: relative;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.checkbox__input:checked + .checkbox__text::before {
+  background: #ffffff;
+}
+.checkbox__text {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  cursor: pointer;
+}
+.checkbox__text::before {
+  content: "";
+  align-self: flex-start;
+  margin: 0 14px 0 0;
+  flex: 0 0 20px;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #a7a9ac;
+}
+
 /*Обнуление CSS*/
 * {
   padding: 0;
@@ -688,7 +758,6 @@ body._lock {
   flex: 1 1 auto;
   padding: 0 0 0 30px;
 }
-
 .menu-page {
   background: #009aaf url(../img/main/bgmenu.jpg) top no-repeat;
   position: relative;
@@ -899,4 +968,97 @@ body._lock {
   color: #333333;
   font-size: 24px;
   font-weight: 900;
+}
+
+.search-page {
+  display: flex;
+  position: relative;
+}
+.search-page__select {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 0 14px;
+  cursor: pointer;
+}
+.search-page__select::before {
+  content: "";
+  background: url(../img/main/search_page.png) 0 0 no-repeat;
+  width: 17px;
+  height: 17px;
+}
+.search-page__select:after {
+  content: "";
+  transition: all 0.3s ease 0s;
+  background: url(../img/main/search_arrow.png) 0 0 no-repeat;
+  width: 10px;
+  height: 10px;
+}
+.search-page__select.-active::after {
+  transform: rotate(180deg);
+}
+.search-page__title {
+  margin: 0 13px;
+  font-weight: 300;
+  color: #666666;
+  border-bottom: 1px dashed;
+}
+.search-page__categories {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.search-page__input {
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  flex: 1 1 auto;
+}
+.search-page__input .input {
+  height: 100%;
+}
+
+.categories-search {
+  display: none;
+  border: 1px solid #f3f3f3;
+  background-color: #fff;
+}
+.categories-search.-active {
+  display: block;
+}
+.categories-search::after {
+  content: "";
+  background-color: #f68038;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  left: 0;
+}
+.categories-search__row {
+  display: flex;
+}
+.categories-search__column {
+  flex: 1 1 33.333%;
+  padding: 27px 40px;
+  border-right: 1px solid #f3f3f3;
+}
+.categories-search__column:last-child {
+  border: 0;
+}
+.categories-search__list li {
+  margin: 0 0 20px 0;
+}
+.categories-search__list li:last-child {
+  margin: 0 0 0 0;
+}
+.categories-search__checkbox .checkbox__input:checked + .checkbox__text {
+  color: #953e09;
+}
+.categories-search__checkbox .checkbox__text {
+  color: #999;
+}
+.categories-search__checkbox .checkbox__text::before {
+  display: none;
 }

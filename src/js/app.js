@@ -27,7 +27,19 @@ for (let index = 0; index < menuParents.length; index++) {
 	menuParent.addEventListener("mouseleave", function (e) {
 		menuParent.classList.remove('-active');
 	});
-}
+};
+
+
+//OPEN SEARCH==============================================================================
+let searchSelect = document.querySelector('.search-page__title');
+let categoriesSearch = document.querySelector('.categories-search');
+
+searchSelect.addEventListener("click", function(e) {
+	searchSelect.parentElement.classList.toggle('-active');
+	categoriesSearch.classList.toggle('-active');
+});
+
+//==========================================================================================
 
 
 

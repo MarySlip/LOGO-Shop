@@ -60,9 +60,14 @@
 
 
 .header {
-	background: url(../img/header/fon2.png) top no-repeat;
+	z-index: 50;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff url(../img/header/fon2.png) top no-repeat;
 		@media (max-width: $md3) {
-				background: url(../img/header/fon2.png) 0 -20px no-repeat;
+				background: #fff url(../img/header/fon2.png) 0 -20px no-repeat;
 			}
 
 	&__top {}
@@ -219,7 +224,7 @@
 	z-index: 5;
 	
 	span {
-		transition: anim(0.3s, 0s);
+		transition: all 0.3s ease 0s;
 		top: calc(50% - 1px);
 		left: 0;
 		position: absolute;
@@ -236,7 +241,7 @@
 			bottom: 0;
 		}
 	}
-		&._active {
+		&.-active {
 			span {
 				transform: scale(0);
 				&:first-child {
